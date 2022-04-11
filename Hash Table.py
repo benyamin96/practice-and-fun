@@ -16,6 +16,7 @@ class HashTable:
         index=self.__hash(key)
         if self.data_map[index] == None:
             self.data_map[index] = []
+        # every cell in the list can have multiple items in another list
         self.data_map[index].append([key, value])
     
     def get_item(self, key):
