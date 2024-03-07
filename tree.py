@@ -40,6 +40,12 @@ class BinarySearchTree:
                 return True
         return False
 
+    def get_min_value(self):
+        temp = self.root
+        while temp.left:
+            temp = temp.left
+        return temp.value
+
 
 
 my_tree=BinarySearchTree()
@@ -56,3 +62,4 @@ print(my_tree.root.left.value)
 print(my_tree.root.right.value)
 
 print(my_tree.contains(100))
+print("Min Value in the tree: ", my_tree.get_min_value())
